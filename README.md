@@ -52,7 +52,6 @@ Programa que calcula a área aproximada entre a curva de uma função quadrátic
 
 - Java 17
 - Maven
-- JUnit 5 (configurado para testes)
 
 ## Detalhes dos Problemas
 
