@@ -2,7 +2,7 @@ package br.com.devcoelho.maratona;
 
 import java.util.*;
 
-public class G {
+public class distintos {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
