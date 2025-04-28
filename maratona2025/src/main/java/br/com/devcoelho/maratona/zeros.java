@@ -3,6 +3,15 @@ package br.com.devcoelho.maratona;
 import java.util.Locale;
 import java.util.Scanner;
 
+/**
+ * Problema H {@summary} -> Calcular a área aproximada entre a curva de uma função quadrática
+ * f(x)=a*x²+b*x+c e o eixo x, dentro do intervalo definido pelos zeros da função (raízes da
+ * equação). A área é calculada subdividindo o intervalo em n subintervalos e usando o método
+ * dos retângulos.
+ *
+ * @author Gabriel Coelho Soares
+ * @since 2025
+ */
 public class zeros {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
