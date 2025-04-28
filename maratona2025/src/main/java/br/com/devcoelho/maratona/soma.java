@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author Gabriel Coelho Soares
  * @since 2025
  */
-public class A {
+public class soma {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     List<Integer> numbers = new ArrayList<>();

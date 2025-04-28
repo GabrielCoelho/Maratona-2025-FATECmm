@@ -12,7 +12,7 @@ import java.util.TreeMap;
  * @author Gabriel Coelho Soares
  * @since 2025
  */
-public class D {
+public class frequencia {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int quantity = Integer.valueOf(scanner.nextLine());

@@ -10,7 +10,7 @@ import java.util.*;
  * @author Gabriel Coelho Soares
  * @since 2025
  */
-public class C {
+public class labirinto {
   // Movimentos: cima, direita, baixo, esquerda, diagonal superior direita, diagonal inferior
   // direita,
   // diagonal inferior esquerda, diagonal superior esquerda

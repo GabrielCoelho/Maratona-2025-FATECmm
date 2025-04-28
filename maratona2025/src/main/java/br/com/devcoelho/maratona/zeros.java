@@ -3,7 +3,7 @@ package br.com.devcoelho.maratona;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class H {
+public class zeros {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     double a = scanner.nextDouble();
