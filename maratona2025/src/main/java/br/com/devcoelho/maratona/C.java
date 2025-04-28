@@ -11,8 +11,11 @@ import java.util.*;
  * @since 2025
  */
 public class C {
-  static int[] dx = {-1, 0, 1, 0};
-  static int[] dy = {0, 1, 0, -1};
+  // Movimentos: cima, direita, baixo, esquerda, diagonal superior direita, diagonal inferior
+  // direita,
+  // diagonal inferior esquerda, diagonal superior esquerda
+  static int[] dx = {-1, 0, 1, 0, -1, 1, 1, -1};
+  static int[] dy = {0, 1, 0, -1, 1, 1, -1, -1};
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -29,6 +32,7 @@ public class C {
         labirynth[i][j] = line.charAt(j);
       }
     }
+
     int shortestPath = findShortestPath(labirynth, rows, cols);
     System.out.println(shortestPath);
     scanner.close();
@@ -49,6 +53,7 @@ public class C {
     } else {
       return -1;
     }
+
     while (!queue.isEmpty()) {
       int[] actual = queue.poll();
       int x = actual[0];
@@ -58,18 +63,26 @@ public class C {
         return visited[x][y];
       }
 
-      for (int i = 0; i < 4; i++) {
+      // Considerar todos os 8 movimentos possíveis (4 cardeais + 4 diagonais)
+      for (int i = 0; i < 8; i++) {
         int nx = x + dx[i];
         int ny = y + dy[i];
 
         if (nx >= 0 && nx < linhas && ny >= 0 && ny < colunas) {
           if (labirinto[nx][ny] == '.' && visited[nx][ny] == -1) {
-            visited[nx][ny] = visited[x][y] + 1;
+            // Para movimentos diagonais (índices 4-7), o caminho é um pouco mais longo
+            if (i >= 4) {
+              visited[nx][ny] =
+                  visited[x][y] + 1; // Considerar o mesmo peso para diagonais neste caso
+            } else {
+              visited[nx][ny] = visited[x][y] + 1;
+            }
             queue.add(new int[] {nx, ny});
           }
         }
       }
     }
-    return -1;
+
+    return -1; // Não há caminho possível
   }
 }
